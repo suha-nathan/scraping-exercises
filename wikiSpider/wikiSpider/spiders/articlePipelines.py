@@ -2,7 +2,7 @@ from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
 from wikiSpider.items import Article
 
-class ArticleSpider(CrawlSpider): 
+class ArticleSpider3(CrawlSpider): 
     name = 'articlePipelines'
     allowed_domains = ['wikipedia.org']
     start_urls = ['https://en.wikipedia.org/wiki/Benevolent_dictator_for_life']

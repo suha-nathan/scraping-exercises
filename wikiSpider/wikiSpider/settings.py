@@ -12,9 +12,24 @@ BOT_NAME = "wikiSpider"
 SPIDER_MODULES = ["wikiSpider.spiders"]
 NEWSPIDER_MODULE = "wikiSpider.spiders"
 
+"""
+scrapy log information 
+• CRITICAL
+• ERROR
+• WARNING
+• DEBUG
+• INFO
+
+to output logs to a separate logfile, 
+define a logfile when running from the command line
+$ scrapy crawl articles -s LOG_FILE=wiki.log
+"""
+# LOG_LEVEL = 'ERROR'
+
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "wikiSpider (+http://www.yourdomain.com)"
+# USER_AGENT = "wikiSpider (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True

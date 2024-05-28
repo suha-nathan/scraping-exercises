@@ -1,6 +1,6 @@
 import scrapy
 
-class ArticleSpider(scrapy.Spider):
+class ArticleSpider1(scrapy.Spider):
     name = "article"
 
     def start_requests(self): #scrapy defined entry point - generates request objects to crawl the website
