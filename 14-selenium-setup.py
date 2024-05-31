@@ -1,16 +1,25 @@
-from selenium import webdriver
 import os
+import time
+from selenium import webdriver
 from dotenv import load_dotenv
+from selenium.webdriver.chrome.service import Service
 
 #load variables from .env file
 load_dotenv()
 
-print(os.getenv("DRIVER_PATH"))
-# Initialize the Chrome driver
-driver = webdriver.Chrome(executable_path=os.getenv("DRIVER_PATH"))
+driver_path = os.getenv("DRIVER_PATH")
+service = Service(driver_path)
 
-# Navigate to the URL
-# driver.get('https://google.com')
+driver = webdriver.Chrome(service=service) 
 
-# It's a good practice to close the browser when done
-# driver.quit()
+driver.get('http://www.google.com/')
+time.sleep(5) # Let the user actually see something!
+
+search_box = driver.find_element('name', 'q')
+search_box.send_keys('ChromeDriver')
+search_box.submit()
+
+time.sleep(5) # Let the user actually see something!
+
+
+driver.quit()
