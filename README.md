@@ -1,8 +1,14 @@
-# Python Scripts for Scraping 
+# Python Scripts for Scraping
 
-Libraries/Packages used:
+Python Libraries/Packages used:
+
 - BeautifulSoup
 - Scrapy
+- Selenium
+- pymysql
+
+Others:
+Chrome Headless Browser
 
 Reference:
 
