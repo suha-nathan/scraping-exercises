@@ -3,9 +3,6 @@ from bs4 import BeautifulSoup
 import re
 import requests
 
-
-import requests
-from bs4 import BeautifulSoup
 session = requests.Session()
 headers = {
     'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5)'
